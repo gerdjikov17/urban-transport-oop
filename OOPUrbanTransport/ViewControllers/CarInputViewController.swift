@@ -26,8 +26,13 @@ class CarInputViewController: NSViewController {
     @IBAction func chooseRouteButtonTap(_ sender: Any) {
         
     }
+    
     @IBAction func addButtonTap(_ sender: Any) {
         
+        self.dismiss(nil)
+    }
+    
+    @IBAction func backButtonTap(_ sender: Any) {
         self.dismiss(nil)
     }
 }

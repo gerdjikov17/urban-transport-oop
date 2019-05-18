@@ -16,6 +16,7 @@
 		1B84327522909EB40040791C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84327422909EB40040791C /* Car.swift */; };
 		1BD9F3692290B1A000DAD752 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F3682290B1A000DAD752 /* RealmSwift.framework */; };
 		1BD9F36C2290B75A00DAD752 /* CarInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F36B2290B75A00DAD752 /* CarInputViewController.swift */; };
+		1BD9F3702290C07A00DAD752 /* ChooseRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F36E2290C07A00DAD752 /* ChooseRouteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,7 @@
 		1B84327422909EB40040791C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		1BD9F3682290B1A000DAD752 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = "<group>"; };
 		1BD9F36B2290B75A00DAD752 /* CarInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInputViewController.swift; sourceTree = "<group>"; };
+		1BD9F36E2290C07A00DAD752 /* ChooseRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRouteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				1B84327022909E8C0040791C /* RouteInputViewController.swift */,
 				1BD9F36B2290B75A00DAD752 /* CarInputViewController.swift */,
+				1BD9F36E2290C07A00DAD752 /* ChooseRouteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				1B84327522909EB40040791C /* Car.swift in Sources */,
 				1B84326322909B3A0040791C /* ViewController.swift in Sources */,
 				1B84326122909B3A0040791C /* AppDelegate.swift in Sources */,
+				1BD9F3702290C07A00DAD752 /* ChooseRouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

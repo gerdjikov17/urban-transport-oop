@@ -20,6 +20,9 @@ class RouteInputViewController: NSViewController, NSTableViewDelegate, NSTableVi
         tableView.reloadData()
     }
     
+    @IBAction func backButtonTap(_ sender: Any) {
+        self.dismiss(nil)
+    }
     @IBAction func addButtonTap(_ sender: Any) {
         let name = nameTextField.stringValue
         guard let length = Double(lengthTextField.stringValue) else { return }
