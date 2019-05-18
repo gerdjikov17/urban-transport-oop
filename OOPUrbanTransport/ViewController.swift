@@ -21,7 +21,8 @@ class ViewController: NSViewController {
     }
     
     @IBAction func addCarButtonTap(_ sender: Any) {
-        
+        guard let carVC = storyboard?.instantiateController(withIdentifier: "addCarVC") as? NSViewController else { return }
+        self.presentAsSheet(carVC)
     }
 }
 
