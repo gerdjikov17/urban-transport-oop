@@ -1,18 +1,11 @@
-//
-//  ViewController.swift
-//  OOPUrbanTransport
-//
-//  Created by Nikola Gerdzhikov on 18.05.19.
-//  Copyright © 2019 Nikola Gerdzhikov. All rights reserved.
-//
-
 import Cocoa
+import RealmSwift
 
 class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let realm = try? Realm()
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +15,13 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func insertButtonTap(_ sender: Any) {
+        guard let inputVC = storyboard?.instantiateController(withIdentifier: "inputVC") as? NSViewController else { return }
+        self.presentAsSheet(inputVC)
+    }
+    
+    @IBAction func addCarButtonTap(_ sender: Any) {
+        
+    }
 }
 

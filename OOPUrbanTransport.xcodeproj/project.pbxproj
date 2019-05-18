@@ -11,7 +11,25 @@
 		1B84326322909B3A0040791C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84326222909B3A0040791C /* ViewController.swift */; };
 		1B84326522909B3C0040791C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84326422909B3C0040791C /* Assets.xcassets */; };
 		1B84326822909B3C0040791C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B84326622909B3C0040791C /* Main.storyboard */; };
+		1B84327122909E8C0040791C /* RouteInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84327022909E8C0040791C /* RouteInputViewController.swift */; };
+		1B84327322909EA80040791C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84327222909EA80040791C /* Route.swift */; };
+		1B84327522909EB40040791C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84327422909EB40040791C /* Car.swift */; };
+		1BD9F3692290B1A000DAD752 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F3682290B1A000DAD752 /* RealmSwift.framework */; };
+		1BD9F36C2290B75A00DAD752 /* CarInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F36B2290B75A00DAD752 /* CarInputViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1BD9F3662290B0AD00DAD752 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B84325D22909B3A0040791C /* OOPUrbanTransport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOPUrbanTransport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +39,11 @@
 		1B84326722909B3C0040791C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B84326922909B3C0040791C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B84326A22909B3C0040791C /* OOPUrbanTransport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OOPUrbanTransport.entitlements; sourceTree = "<group>"; };
+		1B84327022909E8C0040791C /* RouteInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInputViewController.swift; sourceTree = "<group>"; };
+		1B84327222909EA80040791C /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		1B84327422909EB40040791C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		1BD9F3682290B1A000DAD752 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = "<group>"; };
+		1BD9F36B2290B75A00DAD752 /* CarInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD9F3692290B1A000DAD752 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +63,7 @@
 			children = (
 				1B84325F22909B3A0040791C /* OOPUrbanTransport */,
 				1B84325E22909B3A0040791C /* Products */,
+				1BD9F3672290B1A000DAD752 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +78,8 @@
 		1B84325F22909B3A0040791C /* OOPUrbanTransport */ = {
 			isa = PBXGroup;
 			children = (
+				1BD9F36D2290B76D00DAD752 /* ViewControllers */,
+				1BD9F36A2290B53300DAD752 /* Models */,
 				1B84326022909B3A0040791C /* AppDelegate.swift */,
 				1B84326222909B3A0040791C /* ViewController.swift */,
 				1B84326422909B3C0040791C /* Assets.xcassets */,
@@ -61,6 +88,32 @@
 				1B84326A22909B3C0040791C /* OOPUrbanTransport.entitlements */,
 			);
 			path = OOPUrbanTransport;
+			sourceTree = "<group>";
+		};
+		1BD9F3672290B1A000DAD752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F3682290B1A000DAD752 /* RealmSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BD9F36A2290B53300DAD752 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B84327222909EA80040791C /* Route.swift */,
+				1B84327422909EB40040791C /* Car.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BD9F36D2290B76D00DAD752 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B84327022909E8C0040791C /* RouteInputViewController.swift */,
+				1BD9F36B2290B75A00DAD752 /* CarInputViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,6 +126,8 @@
 				1B84325922909B3A0040791C /* Sources */,
 				1B84325A22909B3A0040791C /* Frameworks */,
 				1B84325B22909B3A0040791C /* Resources */,
+				1BD9F3622290AFFF00DAD752 /* ShellScript */,
+				1BD9F3662290B0AD00DAD752 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,11 +183,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BD9F3622290AFFF00DAD752 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Realm.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B84325922909B3A0040791C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD9F36C2290B75A00DAD752 /* CarInputViewController.swift in Sources */,
+				1B84327122909E8C0040791C /* RouteInputViewController.swift in Sources */,
+				1B84327322909EA80040791C /* Route.swift in Sources */,
+				1B84327522909EB40040791C /* Car.swift in Sources */,
 				1B84326322909B3A0040791C /* ViewController.swift in Sources */,
 				1B84326122909B3A0040791C /* AppDelegate.swift in Sources */,
 			);
@@ -275,6 +358,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XFNQF25BM4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = OOPUrbanTransport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +381,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XFNQF25BM4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = OOPUrbanTransport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
