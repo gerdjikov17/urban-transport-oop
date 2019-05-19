@@ -6,6 +6,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = try? Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        print(realm?.objects(Route.self))
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +24,10 @@ class ViewController: NSViewController {
     
     @IBAction func addCarButtonTap(_ sender: Any) {
         guard let carVC = storyboard?.instantiateController(withIdentifier: "addCarVC") as? NSViewController else { return }
+        self.presentAsSheet(carVC)
+    }
+    @IBAction func mainPanelButtonTap(_ sender: Any) {
+        guard let carVC = storyboard?.instantiateController(withIdentifier: "carRouteVC") as? NSViewController else { return }
         self.presentAsSheet(carVC)
     }
 }

@@ -27,10 +27,10 @@ class RouteInputViewController: NSViewController, NSTableViewDelegate, NSTableVi
         let name = nameTextField.stringValue
         guard let length = Double(lengthTextField.stringValue) else { return }
         guard let lapsPerDay = Int(lapsPerDayTextField.stringValue) else { return }
-        
+        let points = self.points.joined(separator: "->")
         let route = Route(name: name, points: points, length: length, lapsPerDay: lapsPerDay)
         let realm = try? Realm()
-        try? realm?.write {
+        try! realm?.write {
             realm?.add(route)
         }
         self.dismiss(nil)
@@ -48,7 +48,7 @@ class RouteInputViewController: NSViewController, NSTableViewDelegate, NSTableVi
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?{
         var result:NSTableCellView
-        result  = tableView.makeView(withIdentifier: (tableColumn?.identifier)!, owner: self) as! NSTableCellView
+        result = tableView.makeView(withIdentifier: (tableColumn?.identifier)!, owner: self) as! NSTableCellView
         result.textField?.stringValue = points[row]
         result.textField?.isEditable = true
         return result

@@ -3,37 +3,45 @@ import Realm
 import RealmSwift
 
 class Route: Object {
-//За маршрута трябва да се знае възловите му точки  и колко километра е дълъг и колко пъти на ден се обикаля.
-    dynamic private var name: String = ""
-    dynamic private var points: List<String> = List()
-    dynamic private var length: Double = -1
-    dynamic private var lapsPerDay: Int = -1
     
-    init(name: String, points: [String], length: Double, lapsPerDay: Int) {
-        super.init()
+    @objc dynamic private var name: String = ""
+    @objc dynamic private var length: Double = -1
+    @objc dynamic private var lapsPerDay = -1
+    @objc dynamic private var points: String = ""
+    
+    convenience init(name: String, points: String, length: Double, lapsPerDay: Int) {
+        self.init()
+        self.points = points
         self.name = name
-        self.points = List<String>()
-        self.points.append(objectsIn: points)
         self.length = length
         self.lapsPerDay = lapsPerDay
     }
     
-    required init() {
-        super.init()
-        self.name = "name"
-        self.points = List()
-        self.length = -1
-        self.lapsPerDay = -1
+    override static func primaryKey() -> String {
+        return "name"
     }
     
-    required init(value: Any, schema: RLMSchema) {
-        super.init()
-    }
-    
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init()
-    }
     override var description: String {
-        return String(format:"name: \(name)\npoints: \(points)\nlength:\(length)\nlapsPerDay:\(lapsPerDay)")
+        return "name: \(name), points: \(points), length:\(length), lapsPerDay:\(lapsPerDay)"
+    }
+    
+    public func getName() -> String {
+        return self.name
+    }
+    
+    public func getPoints() -> String {
+        return self.points
+    }
+    
+    public func getLength() -> Double {
+        return length
+    }
+    
+    public func getLaps() -> Int {
+        return lapsPerDay
+    }
+    
+    override var debugDescription: String {
+        return "\(name), \(points), \(length), \(lapsPerDay)"
     }
 }
