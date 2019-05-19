@@ -768,7 +768,7 @@
                                                                     <subviews>
                                                                         <textField identifier="roadCell" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="VdB-FQ-GqR">
                                                                             <rect key="frame" x="0.0" y="0.0" width="235" height="17"/>
-                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Center" id="vW5-nb-xTR">
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Center" id="vW5-nb-xTR">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
