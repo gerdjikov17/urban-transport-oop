@@ -23,6 +23,16 @@ class Car: Object {
         self.route = route
     }
     
+    convenience init(brand: String, model: String, yearsOld: Int, seats: Int, loadCapability: Double, fuelConsumption: Double) {
+        self.init()
+        self.brand = brand
+        self.model = model
+        self.yearsOld = yearsOld
+        self.seats = seats
+        self.loadCapability = loadCapability
+        self.fuelConsumption = fuelConsumption
+    }
+    
     func getBrand() -> String { return brand }
     func getModel() -> String { return model }
     func getYearsOld() -> Int { return yearsOld}
@@ -35,7 +45,11 @@ class Car: Object {
         self.route = route
     }
     
-    override var description: String {
+    func prettyPrinted() -> String {
         return "\(brand), \(model), \(yearsOld), \(seats), \(loadCapability), \(fuelConsumption)"
+    }
+    
+    override var description: String {
+        return "brand:\(brand), model:\(model), yearsOld:\(yearsOld), seats:\(seats), loadCapability:\(loadCapability), fuelConsumption:\(fuelConsumption)"
     }
 }

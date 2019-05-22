@@ -42,7 +42,7 @@ class CarRoutePanelViewController: NSViewController, NSTableViewDataSource, NSTa
         guard let tableColumn = tableColumn else {return NSView() }
         if tableColumn.identifier.rawValue == "Car" {
             result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("carCell"), owner: self) as! NSTableCellView
-            result.textField?.stringValue = cars[row].description
+            result.textField?.stringValue = cars[row].prettyPrinted()
         }
         else if tableColumn.identifier.rawValue == "Route" {
             result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("routeCell"), owner: self) as! RouteTableViewCell

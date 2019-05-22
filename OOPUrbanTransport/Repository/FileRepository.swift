@@ -58,11 +58,26 @@ class FileRepository: NSObject {
         let url = FileManager.default.temporaryDirectory.appendingPathComponent(fileName)
         do {
             let result = try String(contentsOf: url as URL, encoding: String.Encoding.utf8)
+            let lines = result.components(separatedBy: "\n")
+            for line in lines {
+                let json = convertToDictionary(text: line)
+            }
             print(result)
         } catch {
             print(error)
         }
         return result
+    }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: String.Encoding.utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
     }
     
 }

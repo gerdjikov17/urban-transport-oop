@@ -17,12 +17,23 @@ class Route: Object {
         self.lapsPerDay = lapsPerDay
     }
     
+    convenience init(name: String, length: Double, lapsPerDay: Int) {
+        self.init()
+        self.name = name
+        self.length = length
+        self.lapsPerDay = lapsPerDay
+    }
+    
     override static func primaryKey() -> String {
         return "name"
     }
     
+    func prettyPrinted() -> String {
+        return "\(name), \(points), \(length), \(lapsPerDay)"
+    }
+    
     override var description: String {
-        return "name: \(name), points: \(points), length:\(length), lapsPerDay:\(lapsPerDay)"
+        return "name:\(name), points:\(points), length:\(length), lapsPerDay:\(lapsPerDay)"
     }
     
     public func getName() -> String {
