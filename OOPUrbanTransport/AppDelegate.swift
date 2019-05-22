@@ -14,11 +14,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        let data = FileRepository.shared().readFromFile(fileName: "data.txt")
+        RealmRepository.initWithData(data: data)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        FileRepository.shared().writeToFile(fileName: "data.txt")
     }
 
 

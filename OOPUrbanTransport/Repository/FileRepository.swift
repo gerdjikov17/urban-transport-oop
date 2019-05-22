@@ -53,7 +53,8 @@ class FileRepository: NSObject {
         
     }
     
-    func readFromFile(fileName: String) {
+    func readFromFile(fileName: String) -> String {
+        var result = ""
         let url = FileManager.default.temporaryDirectory.appendingPathComponent(fileName)
         do {
             let result = try String(contentsOf: url as URL, encoding: String.Encoding.utf8)
@@ -61,6 +62,7 @@ class FileRepository: NSObject {
         } catch {
             print(error)
         }
+        return result
     }
     
 }

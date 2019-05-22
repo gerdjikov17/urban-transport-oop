@@ -34,4 +34,12 @@ class RealmRepository: NSObject {
         car.setRoute(route: route)
         try? realm.commitWrite()
     }
+    
+    static func initWithData(data: String) {
+        let realm = try! Realm()
+        realm.beginWrite()
+        realm.objects(Car.self)
+        realm.objects(Route.self)
+        try? realm.commitWrite()
+    }
 }
