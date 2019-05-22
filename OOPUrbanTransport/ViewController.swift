@@ -6,8 +6,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = try? Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        print(realm?.objects(Route.self))
+        FileRepository.shared().writeToFile(fileName: "data.txt")
         // Do any additional setup after loading the view.
     }
 

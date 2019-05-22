@@ -49,17 +49,12 @@ class RouteInputViewController: NSViewController, NSTableViewDelegate, NSTableVi
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?{
         var result:NSTableCellView
         result = tableView.makeView(withIdentifier: (tableColumn?.identifier)!, owner: self) as! NSTableCellView
-//        result.textField?.stringValue = points[row]
         result.textField?.isEditable = true
         result.textField?.objectValue = points[row]
         NotificationCenter.default.addObserver(self, selector: #selector(controlTextDidEndEditing(_:)), name:NSTextField.textDidEndEditingNotification, object: nil)
         return result
     }
     
-//    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-//        return points[row]
-//    }
-//
     func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
         points[row] = (object as! String)
     }
